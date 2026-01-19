@@ -266,6 +266,36 @@
             }
         });
     </script>
-<span class="hacker-text font-serif text-xl tracking-wide font-extrabold uppercase" data-value="Company Logbook">Company Logbook</span>
+<script>
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  let interval = null;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const target = document.querySelector(".hacker-text");
+    if(!target) return;
+    
+    let iteration = 0;
+    
+    clearInterval(interval);
+    
+    interval = setInterval(() => {
+      target.innerText = target.innerText
+        .split("")
+        .map((letter, index) => {
+          if(index < iteration) {
+            return target.dataset.value[index];
+          }
+          return letters[Math.floor(Math.random() * 26)];
+        })
+        .join("");
+      
+      if(iteration >= target.dataset.value.length){ 
+        clearInterval(interval);
+      }
+      
+      iteration += 1 / 3;
+    }, 30);
+  });
+</script>
 </body>
 </html>
