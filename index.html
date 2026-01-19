@@ -182,6 +182,63 @@
             </div>
         </div>
     </footer>
+    <div id="lock-screen" class="fixed inset-0 z-[100] bg-[#1A1A1A] flex flex-col items-center justify-center text-white transition-opacity duration-500">
+        <div class="text-center space-y-8 px-6">
+            <svg class="w-12 h-12 mx-auto text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+            
+            <h2 class="font-serif text-3xl md:text-4xl tracking-wide">Private Access</h2>
+            
+            <div class="flex flex-col space-y-4 w-full max-w-xs mx-auto">
+                <input type="password" id="password-input" placeholder="Enter Password" 
+                    class="bg-transparent border-b border-stone-600 text-center py-3 text-xl font-serif focus:outline-none focus:border-white transition-colors placeholder-stone-600">
+                <button onclick="checkPassword()" 
+                    class="bg-white text-[#1A1A1A] font-sans font-bold uppercase text-xs tracking-[0.2em] py-4 hover:bg-stone-200 transition-colors">
+                    Unlock Site
+                </button>
+            </div>
+            <p id="error-msg" class="text-red-400 text-xs font-sans tracking-wider hidden">Incorrect Password</p>
+        </div>
+    </div>
+
+    <script>
+        // 1. SET YOUR PASSWORD HERE
+        const MY_PASSWORD = "Oldmoney26!"; 
+
+        // 2. CHECK IF ALREADY UNLOCKED
+        if (localStorage.getItem("site_unlocked") === "true") {
+            document.getElementById("lock-screen").style.display = "none";
+        }
+
+        // 3. UNLOCK FUNCTION
+        function checkPassword() {
+            const input = document.getElementById("password-input").value;
+            const errorMsg = document.getElementById("error-msg");
+            const lockScreen = document.getElementById("lock-screen");
+
+            if (input === MY_PASSWORD) {
+                // Fade out effect
+                lockScreen.style.opacity = "0";
+                setTimeout(() => {
+                    lockScreen.style.display = "none";
+                }, 500);
+                // Remember that we unlocked it
+                localStorage.setItem("site_unlocked", "true");
+            } else {
+                errorMsg.classList.remove("hidden");
+                // Shake animation (optional visual cue)
+                document.getElementById("password-input").classList.add("animate-pulse");
+            }
+        }
+        
+        // Allow "Enter" key to submit
+        document.getElementById("password-input").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                checkPassword();
+            }
+        });
+    </script>
 
 </body>
 </html>
