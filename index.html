@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <title>Company Logbook | Digital Growth & Strategy Consultancy</title>
-    <meta name="description" content="Redefining Digital Marketing. Developing intelligent strategies and custom software to accelerate growth for high-performance businesses.">
+    <meta name="description" content="Redefining Digital Marketing. Developing intelligent, efficient and effective workflows that accelerate business performance and optimise digital presence.">
     <meta name="keywords" content="Digital Strategy, Custom Software, Intellectual Assets, Growth Consultancy, London, New York">
     <meta name="author" content="Jade Collins">
     
     <style>
-        /* This hides everything until the page is fully ready */
         body { opacity: 0; transition: opacity 0.5s ease-in; }
-        /* Hard-coded Splash Screen styles to ensure they load INSTANTLY */
         #splash-screen {
             position: fixed; inset: 0; z-index: 9999;
             background-color: #F9F8F6;
@@ -142,10 +140,10 @@
             <p class="font-sans text-[10px] tracking-[0.4em] uppercase text-taupe mb-6">Our Brand Vision</p>
             <h2 class="font-serif text-3xl lg:text-4xl leading-tight mb-8">
                 "True luxury is efficiency.<br>
-                <span class="italic text-taupe">We architect the future.</span>"
+                <span class="italic text-taupe">We orchestrate growth.</span>"
             </h2>
             <p class="font-sans text-stone-500 font-light leading-relaxed max-w-xl mx-auto">
-                We believe that a brand is defined not just by how it looks, but by how it functions. We strip away the unnecessary to reveal the essential, building digital ecosystems that serve as the foundation for your empire.
+                We believe that a brand is defined not just by how it looks, but by how it functions. We strip away the unnecessary to reveal the essential, building a strategically orchestrated network that leverages digital connectivity to create an evolving asset—the foundation of your empire.
             </p>
         </div>
     </section>
@@ -193,7 +191,6 @@
             <p class="font-sans text-xs tracking-[0.3em] uppercase text-taupe mb-12 text-center">Engagement Models</p>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
                 <div class="border border-stone-200 p-8 hover:border-taupe transition-colors duration-300 bg-white text-charcoal shadow-xl">
                     <div class="h-48 mb-8 overflow-hidden bg-white">
                         <img src="pen.jpg" class="w-full h-full object-cover mix-blend-multiply" alt="Pen">
@@ -242,7 +239,6 @@
                     </ul>
                     <a href="#contact" class="block w-full py-4 bg-charcoal text-white text-center text-xs uppercase tracking-widest hover:bg-stone-800 transition-colors">Enquire</a>
                 </div>
-
             </div>
         </div>
     </section>
@@ -376,14 +372,11 @@
     </div>
 
     <script>
-        // ANTI-FLASH FADE IN
         window.addEventListener('load', () => {
-            document.body.style.opacity = '1'; // Reveal the body content
+            document.body.style.opacity = '1';
             const splash = document.getElementById('splash-screen');
             setTimeout(() => { splash.style.opacity = '0'; setTimeout(() => { splash.style.display = 'none'; }, 1000); }, 1800); 
         });
-
-        // PASSWORD LOGIC
         const MY_PASSWORD = "Oldmoney26!"; 
         if (localStorage.getItem("site_unlocked") === "true") { document.getElementById("lock-screen").style.display = "none"; }
         function checkPassword() {
