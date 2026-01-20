@@ -5,15 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <title>Company Logbook | Digital Growth & Strategy Consultancy</title>
-    <meta name="description" content="Redefining Digital Marketing. Developing intelligent, efficient and effective workflows that accelerate business performance and optimise digital presence.">
-    <meta name="keywords" content="Digital Strategy, Custom Software Development, Intellectual Assets, Growth Consultancy, Compliance Tech, Automations, London, New York">
+    <meta name="description" content="Redefining Digital Marketing. Developing intelligent strategies and custom software to accelerate growth for high-performance businesses.">
+    <meta name="keywords" content="Digital Strategy, Custom Software, Intellectual Assets, Growth Consultancy, London, New York">
     <meta name="author" content="Jade Collins">
-    <meta name="robots" content="index, follow">
     
-    <meta property="og:title" content="Company Logbook | Digital Growth Empire">
-    <meta property="og:description" content="Redefining Digital Marketing. Developing intelligent strategies to optimise growth.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://companylogbook.com">
+    <style>
+        /* This hides everything until the page is fully ready */
+        body { opacity: 0; transition: opacity 0.5s ease-in; }
+        /* Hard-coded Splash Screen styles to ensure they load INSTANTLY */
+        #splash-screen {
+            position: fixed; inset: 0; z-index: 9999;
+            background-color: #F9F8F6;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            opacity: 1; transition: opacity 1s ease-out;
+        }
+    </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,13 +51,13 @@
 </head>
 <body class="bg-alabaster text-charcoal antialiased selection:bg-taupe selection:text-white">
 
-    <div id="splash-screen" class="fixed inset-0 z-[150] bg-[#F9F8F6] flex flex-col items-center justify-center transition-opacity duration-1000 ease-out">
+    <div id="splash-screen">
         <div class="text-center space-y-6 animate-pulse">
-            <span class="font-strip text-3xl md:text-5xl font-bold uppercase tracking-widest text-charcoal">
+            <span style="font-family: 'Marcellus', serif; letter-spacing: 0.1em;" class="text-3xl md:text-5xl font-bold uppercase text-[#1A1A1A]">
                 Company Logbook
             </span>
-            <div class="w-16 h-px bg-taupe mx-auto"></div>
-            <p class="font-sans text-[10px] md:text-xs tracking-[0.4em] uppercase text-taupe">
+            <div class="w-16 h-px bg-[#A89F91] mx-auto"></div>
+            <p style="font-family: 'Montserrat', sans-serif; letter-spacing: 0.4em;" class="text-[10px] md:text-xs uppercase text-[#A89F91]">
                 Digital Growth Consultancy
             </p>
         </div>
@@ -105,7 +112,7 @@
                 
                 <h1 class="font-serif text-3xl lg:text-5xl leading-[1.2] uppercase tracking-wide mb-8 text-charcoal">
                     Redefining Digital Marketing<br>
-                    <span class="text-stone-400 normal-case block mt-2">Developing intelligent strategies optimising growth.</span>
+                    <span class="text-stone-400 normal-case block mt-2">Developing intelligent strategies optimising growth</span>
                 </h1>
                 
                 <p class="font-sans text-stone-500 font-light text-sm md:text-base leading-relaxed max-w-xl mb-10">
@@ -186,6 +193,7 @@
             <p class="font-sans text-xs tracking-[0.3em] uppercase text-taupe mb-12 text-center">Engagement Models</p>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
                 <div class="border border-stone-200 p-8 hover:border-taupe transition-colors duration-300 bg-white text-charcoal shadow-xl">
                     <div class="h-48 mb-8 overflow-hidden bg-white">
                         <img src="pen.jpg" class="w-full h-full object-cover mix-blend-multiply" alt="Pen">
@@ -199,8 +207,9 @@
                         <li>• Strategy Roadmap</li>
                         <li>• UI/UX Recommendations</li>
                     </ul>
-                    <a href="#contact" class="block w-full py-3 bg-charcoal text-white text-center text-xs uppercase tracking-widest hover:bg-taupe transition-colors">Select Plan</a>
+                    <a href="#contact" class="block w-full py-4 bg-charcoal text-white text-center text-xs uppercase tracking-widest hover:bg-stone-800 transition-colors">Select Plan</a>
                 </div>
+
                 <div class="border border-stone-200 p-8 hover:border-taupe transition-colors duration-300 bg-white text-charcoal shadow-xl relative">
                     <div class="absolute top-0 right-0 bg-taupe text-white text-[10px] uppercase tracking-widest px-3 py-1">Popular</div>
                     <div class="h-48 mb-8 overflow-hidden bg-white">
@@ -215,8 +224,9 @@
                         <li>• Monthly Compliance Reports</li>
                         <li>• Priority Support</li>
                     </ul>
-                    <a href="#contact" class="block w-full py-3 bg-charcoal text-white text-center text-xs uppercase tracking-widest hover:bg-taupe transition-colors">Select Plan</a>
+                    <a href="#contact" class="block w-full py-4 bg-charcoal text-white text-center text-xs uppercase tracking-widest hover:bg-stone-800 transition-colors">Select Plan</a>
                 </div>
+
                 <div class="border border-stone-200 p-8 hover:border-taupe transition-colors duration-300 bg-white text-charcoal shadow-xl">
                     <div class="h-48 mb-8 overflow-hidden bg-white">
                         <img src="lamp.jpg" class="w-full h-full object-cover mix-blend-multiply" alt="Lamp">
@@ -230,8 +240,9 @@
                         <li>• Dedicated Growth Team</li>
                         <li>• White-label Solutions</li>
                     </ul>
-                    <a href="#contact" class="block w-full py-3 bg-charcoal text-white text-center text-xs uppercase tracking-widest hover:bg-taupe transition-colors">Enquire</a>
+                    <a href="#contact" class="block w-full py-4 bg-charcoal text-white text-center text-xs uppercase tracking-widest hover:bg-stone-800 transition-colors">Enquire</a>
                 </div>
+
             </div>
         </div>
     </section>
@@ -365,10 +376,14 @@
     </div>
 
     <script>
+        // ANTI-FLASH FADE IN
         window.addEventListener('load', () => {
+            document.body.style.opacity = '1'; // Reveal the body content
             const splash = document.getElementById('splash-screen');
             setTimeout(() => { splash.style.opacity = '0'; setTimeout(() => { splash.style.display = 'none'; }, 1000); }, 1800); 
         });
+
+        // PASSWORD LOGIC
         const MY_PASSWORD = "Oldmoney26!"; 
         if (localStorage.getItem("site_unlocked") === "true") { document.getElementById("lock-screen").style.display = "none"; }
         function checkPassword() {
