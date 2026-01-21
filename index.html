@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <title>Company Logbook | Digital Growth & Strategy Consultancy</title>
-    <meta name="description" content="Redefining Digital Marketing. Developing intelligent, efficient and effective workflows that accelerate business performance and optimise digital presence.">
-    <meta name="keywords" content="Digital Strategy, Generative Engine Optimization, GEO, AI Search, Custom Software, Growth Consultancy, London, New York">
+    <title>Company Logbook | Digital Growth Consultancy</title>
+    <meta name="description" content="The Architects of Digital Growth. Developing intelligent, efficient and effective workflows that accelerate business performance and optimise digital presence.">
+    <meta name="keywords" content="Digital Strategy, Generative Engine Optimisation, GEO, AI Search, Custom Software, Growth Consultancy, London, New York">
     <meta name="author" content="Jade Collins">
     
     <style>
@@ -109,8 +109,8 @@
                 <p class="font-sans text-xs tracking-[0.3em] uppercase text-taupe mb-6">Strategy &bull; Intelligence &bull; Growth</p>
                 
                 <h1 class="font-serif text-3xl lg:text-5xl leading-[1.2] uppercase tracking-wide mb-8 text-charcoal">
-                    Redefining Digital Marketing<br>
-                    <span class="text-stone-400 normal-case block mt-2">Developing intelligent strategies optimising growth</span>
+                    The Architects of<br>
+                    <span class="text-stone-400 normal-case block mt-2">Digital Growth</span>
                 </h1>
                 
                 <p class="font-sans text-stone-500 font-light text-sm md:text-base leading-relaxed max-w-xl mb-10">
@@ -199,7 +199,7 @@
                         The world is moving from Search to Answers. Are you visible to generative AI? We don't just chase the algorithm; we engineer the intelligence, establishing your brand as a verified "Source of Truth."
                     </p>
                 </div>
-                </div>
+            </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-[#1A1A1A] border border-stone-800 p-8 hover:border-taupe/40 transition-all duration-300">
@@ -225,7 +225,7 @@
                     <ul class="space-y-4 text-xs text-stone-400 font-light tracking-wide mb-8">
                         <li class="flex items-start"><span class="mr-2 text-taupe">›</span> Everything in Tier 1</li>
                         <li class="flex items-start"><span class="mr-2 text-taupe">›</span> Digital PR "Feeding" (2-3 Placements)</li>
-                        <li class="flex items-start"><span class="mr-2 text-taupe">›</span> NLP-Optimized Content Hub</li>
+                        <li class="flex items-start"><span class="mr-2 text-taupe">›</span> NLP-Optimised Content Hub</li>
                         <li class="flex items-start"><span class="mr-2 text-taupe">›</span> Competitor Displacement Strategy</li>
                     </ul>
                     <a href="#contact" class="block text-center py-3 bg-white text-charcoal text-[10px] uppercase tracking-[0.2em] hover:bg-taupe hover:text-white transition-colors">Start Tier 2</a>
@@ -404,6 +404,18 @@
             </div>
         </div>
     </footer>
+
+    <div id="lock-screen" class="fixed inset-0 z-[100] bg-[#1A1A1A] flex flex-col items-center justify-center text-white transition-opacity duration-500">
+        <div class="text-center space-y-8 px-6">
+            <svg class="w-12 h-12 mx-auto text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+            <h2 class="font-serif text-3xl md:text-4xl tracking-wide">Private Access</h2>
+            <div class="flex flex-col space-y-4 w-full max-w-xs mx-auto">
+                <input type="password" id="password-input" placeholder="Enter Password" class="bg-transparent border-b border-stone-600 text-center py-3 text-xl font-serif focus:outline-none focus:border-white transition-colors placeholder-stone-600">
+                <button onclick="checkPassword()" class="bg-white text-[#1A1A1A] font-sans font-bold uppercase text-xs tracking-[0.2em] py-4 hover:bg-stone-200 transition-colors">Unlock Site</button>
+            </div>
+            <p id="error-msg" class="text-red-400 text-xs font-sans tracking-wider hidden">Incorrect Password</p>
+        </div>
+    </div>
 
     <script>
         window.addEventListener('load', () => {
